@@ -1,25 +1,45 @@
-# DepthFM
+# DepthFM - Fast Monocular Depth Estimation with Flow Matching
 
-DepthFM
+This repository contains a fully working implementation of **DepthFM**, a fast and high-quality monocular depth estimation model based on flow matching and Stable Diffusion v2.1 priors. The setup is tested on GPU with CUDA and includes complete guidance for inference using your own images.
 
-This repository is dedicated to the reimplementation of the research paper "DepthFM: Fast Monocular Depth Estimation with Flow Matching". The goal of this project is to accurately reproduce the results and provide a comprehensive implementation of the model.
-Project Overview
+> ✅ Runs on GPU with PyTorch 2.1.0 + CUDA 12.1  
+> ✅ Compatible with `xformers` 0.0.22.post7  
+> ✅ Single-step inference, no diffusion sampling  
+> ✅ Includes pretrained checkpoint and sample input
 
-DepthFM is a fast and efficient model for monocular depth estimation, utilizing flow matching techniques to enhance accuracy and speed. The model leverages both low- and high-order feature interactions to improve depth prediction while maintaining computational efficiency.
-Objectives
+---
 
-    Reimplement the DepthFM model from scratch.
+## 🧠 Paper Reference
 
-    Validate and benchmark the model using standard datasets.
+**DepthFM: Fast Monocular Depth Estimation with Flow Matching**  
 
-    Upload and maintain the full implementation and results.
+---
 
-Progress
+## 🧪 Example Output
 
-    Initial setup and project structure.
+| Input Image | Predicted Depth |
+|-------------|-----------------|
+| ![](assets/dog.png) | ![](assets/dog.png_depth.png) |
 
-    Implementation of core model architecture (upcoming).
+---
 
-    Training and evaluation scripts (upcoming).
+## 🖥️ System Requirements
 
-    Results and performance comparison (upcoming).
+- **OS**: Ubuntu 20.04 / 22.04
+- **Python**: 3.10+
+- **CUDA**: 12.1
+- **GPU**: NVIDIA GPU with at least 8GB VRAM
+- **Torch**: 2.1.0 + cu121
+- **xFormers**: 0.0.22.post7
+
+> 💡 This model **requires GPU**. CPU-only execution is not supported due to `xformers` FlashAttention ops.
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Tipusultan199/DepthFM.git
+cd DepthFM

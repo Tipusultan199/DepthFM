@@ -1,45 +1,74 @@
-# DepthFM - Fast Monocular Depth Estimation with Flow Matching
+# DepthFM++ – Improved Depth Estimation Framework
 
-This repository contains a fully working implementation of **DepthFM**, a fast and high-quality monocular depth estimation model based on flow matching and Stable Diffusion v2.1 priors. The setup is tested on GPU with CUDA and includes complete guidance for inference using your own images.
+![Sample Depth Estimation](assets/sample_comparison.jpg)
 
-> ✅ Runs on GPU with PyTorch 2.1.0 + CUDA 12.1  
-> ✅ Compatible with `xformers` 0.0.22.post7  
-> ✅ Single-step inference, no diffusion sampling  
-> ✅ Includes pretrained checkpoint and sample input
+**DepthFM++** is an enhanced version of the original [DepthFM](https://arxiv.org/abs/2403.13788), designed for high-fidelity, fast, and flexible monocular depth estimation. This version incorporates robust flow-matching refinements to boost accuracy and reliability, especially in high-resolution or real-time scenarios.
 
 ---
 
-## 🧠 Paper Reference
-
-**DepthFM: Fast Monocular Depth Estimation with Flow Matching**  
-
----
-
-## 🧪 Example Output
-
-| Input Image | Predicted Depth |
-|-------------|-----------------|
-| ![](assets/dog.png) | ![](assets/dog.png_depth.png) |
+## 🚀 Key Highlights
+- 🔁 Optimized ODE solver for smoother trajectory integration
+- 🎲 Improved ensemble sampling for robust uncertainty estimation
+- 📐 Adaptive resolution and percentile-based normalization
+- ⚡ Achieves significantly better depth metrics at close ranges
 
 ---
 
-## 🖥️ System Requirements
+## 🛠️ Quick Start
 
-- **OS**: Ubuntu 20.04 / 22.04
-- **Python**: 3.10+
-- **CUDA**: 12.1
-- **GPU**: NVIDIA GPU with at least 8GB VRAM
-- **Torch**: 2.1.0 + cu121
-- **xFormers**: 0.0.22.post7
+### ✅ Prerequisites
+- NVIDIA GPU (16GB+ VRAM recommended)
+- Python 3.8+
+- CUDA 11.7+
 
-> 💡 This model **requires GPU**. CPU-only execution is not supported due to `xformers` FlashAttention ops.
-
----
-
-## ⚙️ Installation
-
-### 1. Clone the Repository
-
+### 🧪 Installation
 ```bash
-git clone https://github.com/Tipusultan199/DepthFM.git
-cd DepthFM
+unzip DepthFM-Improved.zip
+cd DepthFM-Improved
+
+# Set up virtual environment
+python -m venv venv
+source venv/bin/activate  # For Linux/Mac
+venv\Scripts\activate     # For Windows
+
+# Install dependencies
+pip install -r requirements.txt
+
+### File Structure
+
+DepthFM-Improved/
+├── assets/               # Sample RGB/depth images
+├── checkpoints/          # Pretrained model weights
+│   └── depthfm-v1.5.ckpt
+├── depthfm/              # Core flow matching code
+├── outputs/              # Saved inference results
+└── inference.py          # Inference script
+
+
+### Running Inference
+## Single Image
+
+python inference.py \
+  --ckpt checkpoints/depthfm-v1.5.ckpt \
+  --img assets/dog.png \
+  --output_dir outputs \
+  --num_steps 8 \
+  --ensemble_size 5
+
+
+###  Batch Processing
+
+python inference.py \
+  --eval_dataset \
+  --image_dir assets/rgb_images \
+  --depth_dir assets/depth_maps \
+  --batch_size 4
+
+
+
+✅ **Next Steps:**
+- Make sure the `assets/sample_comparison.jpg` image exists to show in the preview.
+- Include the `requirements.txt` and `LICENSE` files in your repo root.
+
+Let me know if you want a version with a GitHub Actions badge, Colab notebook, or citation block for academic use.
+

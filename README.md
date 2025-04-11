@@ -42,8 +42,6 @@ DepthFM-Improved/
 ├── depthfm/              # Core flow matching code
 ├── outputs/              # Saved inference results
 └── inference.py          # Inference script
-![1](https://github.com/user-attachments/assets/24b66095-f1f5-465d-a253-9b744a1ce006)
-![2](https://github.com/user-attachments/assets/eace0ff6-7d0e-4757-b069-3038052259c6)
 
 
 ### Running Inference

@@ -5,7 +5,7 @@
 
 ---
 
-## 🚀 Key Highlights
+## Key Highlights
 - 🔁 Optimized ODE solver for smoother trajectory integration
 - 🎲 Improved ensemble sampling for robust uncertainty estimation
 - 📐 Adaptive resolution and percentile-based normalization
@@ -13,14 +13,14 @@
 
 ---
 
-## 🛠️ Quick Start
+##  Quick Start
 
-### ✅ Prerequisites
+###  Prerequisites
 - NVIDIA GPU (16GB+ VRAM recommended)
 - Python 3.8+
 - CUDA 11.7+
 
-### 🧪 Installation
+###  Installation
 ```bash
 unzip DepthFM-Improved.zip
 cd DepthFM-Improved
@@ -65,7 +65,7 @@ python inference.py \
 
 
 
-✅ **Next Steps:**
+**Next Steps:**
 - Make sure the `assets/sample_comparison.jpg` image exists to show in the preview.
 - Include the `requirements.txt` and `LICENSE` files in your repo root.
 

@@ -14,6 +14,18 @@
 
 ---
 
+---
+
+### 📸 Visual Comparison: Original vs. Improved DepthFM
+
+| Original Output                         | Improved Output                          |
+|----------------------------------------|------------------------------------------|
+| ![Original](https://raw.githubusercontent.com/Tipusultan199/DepthFM/main/1.png) | ![Improved](https://raw.githubusercontent.com/Tipusultan199/DepthFM/main/2.png) |
+
+**Figure:** Left shows the output from the original DepthFM. Right shows results from DepthFM++, highlighting sharper object edges, better boundary consistency, and improved depth accuracy.
+
+
+
 ## 🔍 Key Highlights
 
 - Optimized ODE solver for smoother trajectory integration  

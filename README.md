@@ -1,6 +1,10 @@
 # Revisiting DepthFM: A High-Fidelity and Efficient Flow Matching Framework for Monocular Depth Estimation
 ![Sample Depth Estimation](assets/sample_comparison.jpg)
 
+
+# File: depthfm-v1.ckpt
+https://sluedu-my.sharepoint.com/:f:/g/personal/tipu_sultan_slu_edu/EndixeYj6dRPuhKia0kdI1sB5z_EdxYzd-C5YiO8VEWT8Q?e=TaUA2E
+
 **DepthFM++** is an enhanced version of the original [DepthFM](https://arxiv.org/abs/2403.13788), designed for high-fidelity, fast, and flexible monocular depth estimation. This version incorporates robust flow-matching refinements to boost accuracy and reliability, especially in high-resolution or real-time scenarios.
 
 ---

@@ -22,7 +22,7 @@
 |----------------------------------------|------------------------------------------|
 | ![Original](https://raw.githubusercontent.com/Tipusultan199/DepthFM/main/2.png) | ![Improved](https://raw.githubusercontent.com/Tipusultan199/DepthFM/main/1.png) |
 
-**Figure:** Left shows the output from the original DepthFM. Right shows results from DepthFM++, highlighting sharper object edges, better boundary consistency, and improved depth accuracy.
+**Figure:** Right shows the output from the original DepthFM. left shows results from DepthFM++, highlighting sharper object edges, better boundary consistency, and improved depth accuracy.
 
 
 
